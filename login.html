@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود و ثبت‌ نام</title>
+  <link rel="icon" href="../icons/boxicons-2.1.4/svg/logos/bxl-apple.svg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+        <!-- فرم ورود -->
+        <div id="login-form">
+            <h2>ورود به حساب کاربری</h2>
+            <form id="login" method="POST">
+                <div class="input-group">
+                    <label for="username">نام کاربری یا ایمیل</label>
+                    <input type="text" id="username" name="username" placeholder="نام کاربری یا ایمیل" required aria-label="نام کاربری یا ایمیل را وارد کنید">
+                </div>
+                <div class="input-group">
+                    <label for="password">رمز عبور</label>
+                    <input type="password" id="password" name="password" placeholder="رمز عبور را وارد کنید" required aria-label="رمز عبور">
+                </div>
+                <div class="form-actions">
+                    <button type="submit">ورود</button>
+                    <a href="#forgot-password-form" class="forgot-password">فراموشی رمز عبور</a>
+                </div>
+                <div class="form-actions">
+                    <p>حساب کاربری ندارید؟ <a href="#signup-form" id="go-to-signup">ثبت‌ نام کنید</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- فرم ثبت‌نام -->
+        <div id="signup-form" style="display:none;">
+            <h2>ثبت‌نام</h2>
+            <form id="signup" method="POST">
+                <div class="input-group">
+                    <label for="name">نام</label>
+                    <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required aria-label="نام">
+                </div>
+                <div class="input-group">
+                    <label for="email">ایمیل</label>
+                    <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required aria-label="ایمیل">
+                </div>
+                <div class="input-group">
+                    <label for="password">رمز عبور</label>
+                    <input type="password" id="password" name="password" placeholder="رمز عبور" required aria-label="رمز عبور">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">تأیید رمز عبور</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="رمز عبور را تایید کنید" required aria-label="تأیید رمز عبور">
+                </div>
+                <div class="form-actions">
+                    <button type="submit">ثبت‌نام</button>
+                </div>
+                <div class="form-actions">
+                    <p>حساب دارید؟ <a href="#login-form" id="go-to-login">ورود کنید</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- فرم بازیابی رمز عبور -->
+        <div id="forgot-password-form" style="display:none;">
+            <h2>بازیابی رمز عبور</h2>
+            <form id="forgot-password" method="POST">
+                <div class="input-group">
+                    <label for="forgot-email">ایمیل خود را وارد کنید</label>
+                    <input type="email" id="forgot-email" name="forgot-email" placeholder="ایمیل  " required aria-label="ایمیل بازیابی">
+                </div>
+                <div class="form-actions">
+                    <button type="submit">ارسال لینک بازیابی</button>
+                </div>
+                <div class="form-actions">
+                    <p>حساب دارید؟ <a href="#login-form" id="go-to-login">وارد شوید</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
